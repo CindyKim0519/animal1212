@@ -1,0 +1,291 @@
+@charset "uft-8";
+
+/* tablet 해상도 영역에서 적용되는 서식 */
+@media screen and (min-width:768px) and (max-width:1024px) {
+    .cart_btn {
+        display: none;
+    }
+
+    header {
+        position: relative;
+        width: 100%;
+        height: 170px;
+    }
+
+    .h_top h1 {
+        position: absolute;
+        left: 10px;
+        top: 30px;
+    }
+
+    .h_top h1 img {
+        width: 190px;
+    }
+
+    .total_btn {
+        left: auto;
+        right: 5px !important;
+        top: 110px;
+        font-size: 2rem;
+    }
+
+    /* lnb서식 */
+    .h_top>.lnb {
+        position: absolute;
+        left: auto;
+        right: 0px;
+        top: 20px;
+        width: 300px;
+    }
+
+    .h_top>.lnb>ul {
+        flex-wrap: nowrap;
+
+    }
+
+    .h_top>.lnb>ul>li {
+        background: none;
+    }
+
+    .h_top>.lnb>ul>li>a {}
+
+    /* 검색폼 서식 */
+    fieldset {
+        position: absolute;
+        left: auto;
+        right: 0px;
+        top: 60px;
+        width: 500px;
+        text-align: right;
+    }
+
+    /* gnb서식 */
+    .gnb {
+        position: absolute;
+        left: auto;
+        right: 0px;
+        top: 20px;
+        background: none;
+    }
+
+    .gnb>ul {
+        display: flex;
+        justify-content: center;
+        padding-right: 6%;
+    }
+
+    .gnb>ul>li>a>i.fa-angle-down {
+        display: none;
+    }
+
+    .gnb>ul>li {
+        border: none;
+        padding: 0px 3.3%;
+        position: relative;
+        text-indent:0px;
+    }
+
+    .gnb>ul>li>a {
+        font-size: 0.9rem;
+    }
+
+    .gnb>ul>li>a::after {
+        width: 1px;
+        height: 14px;
+        background: #fff;
+        content: "";
+        display: block;
+        position: relative;
+        top: -28px;
+        left:-20px;
+    }
+
+    .gnb>ul>li:first-child>a::after {
+        display: none;
+    }
+
+    .c_btn {
+        display: none;
+    }
+
+    /*서브메뉴 서식 */
+    .sub {
+        position: absolute;
+        left: 0px;
+        top: 50px;
+        width: 100%;
+        height: 240px;
+        padding: 15px 0px;
+        background: rgba(255, 255, 255, .9);
+        text-align: center;
+        display: none;
+        line-height: 190%;
+    }
+    .sub a{
+        padding:0px 3%;
+        font-size:0.67rem;
+    }
+    #toggle {
+        z-index: 9999;
+    }
+
+    #toggle:checked~header .gnb .sub {
+        display: block;
+    }
+
+    .gnb li:first-child .sub {
+        padding-left: 300px;
+        left: -300px;
+    }
+
+    .gnb li:nth-child(6) .sub {
+        padding-right: 400px;
+        right: 400px;
+    }
+
+    /* 전테메뉴 아이콘 터치잘되게 위로 올리기 */
+    .total_btn {
+        z-index: 9001;
+    }
+
+    /* 전체메뉴 클릭시 서브메뉴 나오게 하기 */
+    #toggle:checked+header .gnb .sub {
+        display: block;
+    }
+
+    /* .lnb, 검색박스 움직이지 않게 하기 */
+    #toggle:checked+header>.h_top>.lnb {
+        left: auto;
+    }
+
+    #toggle:checked+header>.h_top>fieldset {
+        left: auto;
+    }
+
+    .visual_slide {
+        height: auto;
+    }
+
+    .swiper-wrapper div img {
+        width: 140%;
+        /* width:auto; */
+        transform: translateX(-200px);
+        object-fit: cover;
+    }
+
+    /* 사료 무료체험 서식 */
+    .free_ex article {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .free_ex article>img {
+        width: 40%;
+        margin: 0;
+    }
+
+    .free_ex_right img {
+        width: 50px;
+        padding-bottom: 10px;
+    }
+
+    .free_ex_right {
+        padding-top: 30px;
+    }
+
+    .free_ex_right>p {
+        padding-bottom: 80px;
+    }
+
+    .product {
+        width: 100%;
+    }
+
+    .product>li {
+        width: 43%;
+    }
+    .product>li img{
+        width:148px;
+    }
+
+    /* 펫스토리 */
+    .story>article {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .story>article>img {
+        width: 40%;
+    }
+
+    .story_left {
+        width: 40%;
+        margin: 0px;
+        padding-top: 30px;
+    }
+
+    .story_left p {
+        padding-bottom: 80px;
+    }
+    .gallery{
+        grid-template-columns:repeat(3,auto);
+        grid-template-rows:repeat(3,150px);
+
+    }
+    .gallery>li:nth-child(9)~li{display:block;}
+
+    /* footer 서식 */
+    footer{}
+    .f_top{
+        flex-wrap:nowrap;
+        flex-direction:row-reverse;
+        height:50px;
+    }
+    .f_nav{
+        width:35%;
+        background:#989898;
+        line-height:50px;
+    }
+    .f_top>dl{
+        width:65%;line-height:50px;
+    }
+    .f_top>dl>dd{line-height:50px;}
+
+    .f_bottom>ul {
+        display: flex;
+        flex-wrap: nowrap;
+    }
+    .f_bottom>ul> li:first-child{order:1; width:80%;}
+    .f_bottom>ul> li:nth-child(2){order:2; width:80%;}
+    .f_bottom>ul> li:nth-child(3){order:4;
+        line-height:38px;}
+    .f_bottom>ul> li:last-child{order:3;}
+
+    .f_bottom select, .f_bottom li:nth-child(3) a{
+        position:absolute;}
+
+        .f_bottom select{
+            width:200px;
+            right:40px;top:90px;
+        }
+    
+        .f_bottom li:nth-child(3) a{
+            right:40px; top:130px;
+        }
+        .f_bottom li:nth-child(3) a:first-child{
+            transform:translateX(-100px);
+        }
+        .f_bottom li:nth-child(3) a:nth-child(2){
+            transform:translateX(-50px);
+        }
+    @media screen and (min-width:881px) and (width:1024px){
+        .gallery{
+            grid-template-columns:repeat(4,auto);
+            grid-template-rows:repeat(3,190px);
+            
+        }
+        .gallery li:nth-child(6)~li{display:block;}
+        .f_bottom br{display:none;}
+    }
+
+}
